@@ -18,7 +18,7 @@ let pay_data = {
 pay_data['sign'] = md5(pay_data['name'] + pay_data['pay_type'] + pay_data['price'] + pay_data['order_id'] + pay_data['notify_url'] + secret);
 console.log(pay_data);
 
-query_string = Object.entries(pay_data).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
+let query_string = Object.entries(pay_data).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
 
 let url = 'https://xorpay.com/api/pay/' + aid + '?' + query_string;
 console.log(url);
