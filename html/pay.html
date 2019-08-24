@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>XorPay.com demo</title>
+      <meta name="author" content="xorpay.com">
+      <script src="./md5.js"></script>
+      <style>
+        .area {
+            width: 200px;
+            margin: auto auto;
+        }
+        .item {
+            display: block;
+            width: 100%;
+            line-height: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="area">
+            <h3 class="item">XorPay.com demo</h2>
+            <form action="" method="post" id="api_form">
+                <input class="item" type="text" name="name" id="api_name" placeholder="name">
+                <input class="item" type="text" name="pay_type" id="api_pay_type" placeholder="pay_type" value="native">
+                <input class="item" type="text" name="price" id="api_price" placeholder="price">
+                <input class="item" type="text" name="order_id" id="api_order_id" placeholder="order_id">
+                <input class="item" type="text" name="order_uid" id="api_order_uid" placeholder="order_uid">
+                <input class="item" type="text" name="notify_url" id="api_notify_url" placeholder="notify_url" value="https://xorpay.com/main">
+                <input class="item" type="text" name="sign" id="api_sign" placeholder="sign">
+                <br>
+                <input class="item" type="text" id="api_aid" placeholder="aid">
+                <input class="item" type="text" id="api_secret" placeholder="secret">
+                <input class="item" type="button" value="第一步: 计算sign" onclick="calc_sign()" style="width:107%;">
+                <br>
+                <input class="item" type="submit" value="第二步: 支 付" style="width:107%;">
+            </form>
+        </div>
+        <script>
+            var calc_sign = function () {
+                var name = document.getElementById("api_name").value;
+                var pay_type = document.getElementById("api_pay_type").value;
+                var price = document.getElementById("api_price").value;
+                var order_id = document.getElementById("api_order_id").value;
+                var notify_url = document.getElementById("api_notify_url").value;
+                var aid = document.getElementById("api_aid").value;
+                var secret = document.getElementById("api_secret").value;
+
+                console.log(name + pay_type + price + order_id + notify_url + secret);
+                document.getElementById("api_sign").value = md5(name + pay_type + price + order_id + notify_url + secret);
+                document.getElementById("api_form").action = "https://xorpay.com/api/pay/" + aid;
+            };
+        </script>
+    </body>
+</html>

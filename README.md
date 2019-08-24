@@ -9,13 +9,14 @@
 ### 支持接口
 
 * [签名算法](https://xorpay.com/doc/sign.html)
-* [NATIVE 扫码支付](https://xorpay.com/doc/native.html)
-* [收银台支付](https://xorpay.com/doc/cashier.html)
-* [小程序支付](https://xorpay.com/doc/mini.html)
-* [JSAPI 网页支付](https://xorpay.com/doc/jsapi.html)
+* [支付宝 - 单面付](https://xorpay.com/doc/alipay.html)
+* [微信 - NATIVE 扫码支付](https://xorpay.com/doc/native.html)
+* [微信 - 收银台支付](https://xorpay.com/doc/cashier.html)
+* [微信 - 小程序支付](https://xorpay.com/doc/mini.html)
+* [微信 - JSAPI 网页支付](https://xorpay.com/doc/jsapi.html)
+* [微信 - 获取 OPENID](https://xorpay.com/doc/openid.html)
 * [订单状态查询](https://xorpay.com/doc/query.html)
 * [回调通知](https://xorpay.com/doc/notify.html)
-* [获取 OPENID](https://xorpay.com/doc/openid.html)
 * [退款](https://xorpay.com/doc/refund.html)
 
 ### 链接
@@ -26,6 +27,9 @@
 
 ### 客服联系方式
 
+* **欢迎开发者提供 SDK 或 DEMO ，采纳者奖励 ￥200 代金券**
+
 - 客服微信: xorpay_com
 - 客服 QQ: 1701943006
 - 客服邮箱: i@xorpay.com
+
